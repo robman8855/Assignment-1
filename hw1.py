@@ -2,9 +2,8 @@ from data import dataSet
 from Tree import Tree
 
 
-file=r"C:\Users\Donald Trump\Downloads\BiomechanicalData_column_3C_weka.csv"
-file2=r"C:\Users\Donald Trump\Downloads\Biomechanical_Data_column_2C_weka.csv"
-min_data = 12
+file=r"path here"
+min_data_per_node = 12
 trainsize = 210
 testSize = 100
 trials=1
@@ -12,13 +11,13 @@ trials=1
 total=0
 
 for i in range(trials):
-    D = dataSet(file2)
+    D = dataSet(file)
     T = Tree(D.getTrain(trainsize))
 
 
     T.Display(0)
 
-    T.train(min_data)
+    T.train(min_data_per_node)
 
     T.Display(0)
 
